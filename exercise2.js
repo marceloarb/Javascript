@@ -3,13 +3,11 @@
 /************************************************************* */
 // Problem 1: Refactor the for() loop to be a while loop.
 //
-
-for(let i=0; i<10; i++) {
+let i = 0;
+while(i<11) {
     console.log(" the value of i in the loop is : " + i);
+    i++
 }
-
-
-//your code...
 
 
 
@@ -18,26 +16,46 @@ for(let i=0; i<10; i++) {
 // Problem 2:
 // multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2
 //use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
+let sum;
+let mult; 
+let div;
 
-//your code...
-
+const all = ()=>{
+    return console.log(mult/div);
+}
+const Add = (a,b) => {
+        sum = a+b;
+        return function multiply(c){
+        mult = sum * c;
+        return mult;
+    };
+    }
+const power = (d)=>{
+    div = d*d;
+    return div;
+}
+Add(30,2)(20);
+power(10);
+all();
 
 /************************************************************* */
 //Problem 3:
 //Determine whether the following values are "truthy" or "falsy".  console.log() the value, whether the value is 'truthy' or 'falsy', along with your reasoning why using String interpolation.
-// values : 
-// 20
-// 0
-// "zero";
-// const zero = 20;
-// null
-// "0"
-// !""
-// {}
-// () => {console.log("hello TEKcamp!");
-// 125
-// undefined
-// ""
+// let values = [
+//     20,
+//     0,
+//     "zero",
+//     let zero = 20,
+//     null,
+//     "0",
+//     !"",
+//     {},
+//     () => {console.log("hello TEKcamp!"),
+//     125
+//     undefined
+//     ""
+// ]
+
 
 
 
@@ -47,19 +65,26 @@ for(let i=0; i<10; i++) {
 // Refactor the following code using a switch statement:
 
 const day = "friday";
+switch(day){
+    case("monday"): 
+        console.log("we got a long week ahead of us...");
+        break;
+    case("tuesday"): 
+        console.log("tuesday's are still beterr than mondays, but LONG way to go still");
+        break;
+    case("wednesday"): 
+        console.log("We are smack dab in the middle of the week");
+        break;
+    case("thursday"): 
+        console.log("Thursday night... the mood is right");
+        break;
+    case("friday"): 
+        console.log("TGIF.  Friday truly is the best day of the week!");
+        break;
+    default :
+        console.log("It's a weekend!")
+    
 
-if(day === "monday") {
-    console.log("we got a long week ahead of us...");
-} else if(day === "tuesday") {
-    console.log("tuesday's are still beterr than mondays, but LONG way to go still");
-} else if (day === "wednesday") {
-    console.log("We are smack dab in the middle of the week");
-} else if (day === "thursday") {
-    console.log("Thursday night... the mood is right");
-} else if (day === "friday") {
-    console.log("TGIF.  Friday truly is the best day of the week!")
-} else {
-    console.log("It's a weekend!")
 }
 
 
