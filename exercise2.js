@@ -41,20 +41,37 @@ all();
 /************************************************************* */
 //Problem 3:
 //Determine whether the following values are "truthy" or "falsy".  console.log() the value, whether the value is 'truthy' or 'falsy', along with your reasoning why using String interpolation.
-// let values = [
-//     20,
-//     0,
-//     "zero",
-//     let zero = 20,
-//     null,
-//     "0",
-//     !"",
-//     {},
-//     () => {console.log("hello TEKcamp!"),
-//     125
-//     undefined
-//     ""
-// ]
+// values : 
+//     20
+// 0
+// "zero";
+const zero = 20;
+// null
+// "0"
+// !""
+// {}
+// 125
+// undefined
+// ""
+//  
+if(zero){
+    console.log("Variable "+zero+ " is defined")
+}
+    else{
+    console.log("Variable "+ arr[x] +" has not been defined")
+}
+const arr = [
+    "zero",0,28,null,"0",!"",{},125,undefined,""
+]
+for(let x = 0; x<arr.length; x++){
+    if(arr[x]){
+    console.log("Variable "+arr[x]+ " is defined")
+}
+    else{
+    console.log("Variable "+ arr[x] +" has not been defined")
+}
+}
+
 
 
 
@@ -108,6 +125,7 @@ if (age > 65) console.log("retired"); else {
 /************************************************************* */
 // Problem 6: Create an object literal that represents yourself.  set it to a variable that appropriately describes the object.  Include the following properties:
 /*
+
 -name
 -age
 -gender
@@ -120,13 +138,62 @@ if (age > 65) console.log("retired"); else {
 -add another method on your object of any action you want to perform, using some property that exists on your object, making sure to utilize the 'this' keyword.
 */
 
-//your code...
+const yourself = class{
+    constructor(name,age,gender,hobbies,profession,education){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.hobbies = hobbies;
+        this.profession = profession;
+        this.education = education;
+    }
+    learn(){
+        console.log("My name is "+this.name);
 
+    }
+    poker(chips){
+        this.hobbies += chips;
+        console.log("Look how many chips I have "+ this.hobbies);
+    }
+}
+const marcelo = new yourself("Marcelo",26,"Male",poker = 80,"Software engineer","Bacharel");
+marcelo.learn();
+marcelo.poker(50);
 
 /************************************************************* */
 // Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back to one of the properties you defined on this object literal.  
 
-//your code...
+const Dog = class{
+    constructor(breed,color,age){
+        this.breed = breed;
+        this.color = color;
+        this.age = age;
+    }
+}
+
+Dog.prototype.ageInHumanYears = function(){
+    console.log(this.age * 7)
+};
+const dog1 = new Dog("Labrador","Brown",3);
+const dog2 = new Dog("Pitbull", "white", 5);
+dog1.ageInHumanYears();
+dog2.ageInHumanYears();
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// const Dog = {
+//     ageInHumanYears: function(){
+//         console.log(this.age * 7);
+//     }
+// };
+
+// const dog1 = Object.create(Dog);
+// dog1.breed = "Lab";
+// dog1.color = "Brown";
+// dog1.age = 4;
+// console.log(dog1);
+// dog1.ageInHumanYears();
 
 
 
@@ -142,7 +209,16 @@ if (age > 65) console.log("retired"); else {
 
 //1. Create a Higher Order Function called multiple(x) that takes a single parameter.  This HOF should return another function fn(y) that takes another single parameter y.  This inner function should compute the product of it's parameter with the parameter passed into multiple.  Use this returned "first-class" function to compute triples of any given number.
 
-//your code...
+const multiple = (x)=>{
+    return function fn(y){
+        return(x*y);
+    };
+}
+
+let triple = multiple(3)(3);
+console.log(triple);
+triple = multiple(3)(6);
+console.log(triple);
 
 
 // 2. Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
