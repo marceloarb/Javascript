@@ -4,7 +4,7 @@
 // Problem 1: Refactor the for() loop to be a while loop.
 //
 let i = 0;
-while(i<11) {
+while (i < 11) {
     console.log(" the value of i in the loop is : " + i);
     i++
 }
@@ -17,24 +17,24 @@ while(i<11) {
 // multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2
 //use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
 let sum;
-let mult; 
+let mult;
 let div;
 
-const all = ()=>{
-    return console.log(mult/div);
+const all = () => {
+    return console.log(mult / div);
 }
-const Add = (a,b) => {
-        sum = a+b;
-        return function multiply(c){
+const Add = (a, b) => {
+    sum = a + b;
+    return function multiply(c) {
         mult = sum * c;
         return mult;
     };
-    }
-const power = (d)=>{
-    div = d*d;
+}
+const power = (d) => {
+    div = d * d;
     return div;
 }
-Add(30,2)(20);
+Add(30, 2)(20);
 power(10);
 all();
 
@@ -54,22 +54,22 @@ const zero = 20;
 // undefined
 // ""
 //  
-if(zero){
-    console.log("Variable "+zero+ " is defined")
-}
-    else{
-    console.log("Variable "+ arr[x] +" has not been defined")
-}
+// if(zero){
+//     console.log("Variable "+zero+ " is defined")
+// }
+//     else{
+//     console.log("Variable "+ arr[x] +" has not been defined")
+// }
 const arr = [
-    "zero",0,28,null,"0",!"",{},125,undefined,""
+    "zero", 0, 28, null, "0", !"", {}, 125, undefined, "", zero
 ]
-for(let x = 0; x<arr.length; x++){
-    if(arr[x]){
-    console.log("Variable "+arr[x]+ " is defined")
-}
-    else{
-    console.log("Variable "+ arr[x] +" has not been defined")
-}
+for (let x = 0; x < arr.length; x++) {
+    if (arr[x]) {
+        console.log("Variable " + arr[x] + " is defined")
+    }
+    else {
+        console.log("Variable " + arr[x] + " has not been defined")
+    }
 }
 
 
@@ -82,25 +82,25 @@ for(let x = 0; x<arr.length; x++){
 // Refactor the following code using a switch statement:
 
 const day = "friday";
-switch(day){
-    case("monday"): 
+switch (day) {
+    case ("monday"):
         console.log("we got a long week ahead of us...");
         break;
-    case("tuesday"): 
+    case ("tuesday"):
         console.log("tuesday's are still beterr than mondays, but LONG way to go still");
         break;
-    case("wednesday"): 
+    case ("wednesday"):
         console.log("We are smack dab in the middle of the week");
         break;
-    case("thursday"): 
+    case ("thursday"):
         console.log("Thursday night... the mood is right");
         break;
-    case("friday"): 
+    case ("friday"):
         console.log("TGIF.  Friday truly is the best day of the week!");
         break;
-    default :
+    default:
         console.log("It's a weekend!")
-    
+
 
 }
 
@@ -138,8 +138,8 @@ if (age > 65) console.log("retired"); else {
 -add another method on your object of any action you want to perform, using some property that exists on your object, making sure to utilize the 'this' keyword.
 */
 
-const yourself = class{
-    constructor(name,age,gender,hobbies,profession,education){
+const yourself = class {
+    constructor(name, age, gender, hobbies, profession, education) {
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -147,34 +147,34 @@ const yourself = class{
         this.profession = profession;
         this.education = education;
     }
-    learn(){
-        console.log("My name is "+this.name);
+    learn() {
+        console.log("My name is " + this.name);
 
     }
-    poker(chips){
+    poker(chips) {
         this.hobbies += chips;
-        console.log("Look how many chips I have "+ this.hobbies);
+        console.log("Look how many chips I have " + this.hobbies);
     }
 }
-const marcelo = new yourself("Marcelo",26,"Male",poker = 80,"Software engineer","Bacharel");
+const marcelo = new yourself("Marcelo", 26, "Male", poker = 80, "Software engineer", "Bacharel");
 marcelo.learn();
 marcelo.poker(50);
 
 /************************************************************* */
 // Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back to one of the properties you defined on this object literal.  
 
-const Dog = class{
-    constructor(breed,color,age){
+const Dog = class {
+    constructor(breed, color, age) {
         this.breed = breed;
         this.color = color;
         this.age = age;
     }
 }
 
-Dog.prototype.ageInHumanYears = function(){
+Dog.prototype.ageInHumanYears = function () {
     console.log(this.age * 7)
 };
-const dog1 = new Dog("Labrador","Brown",3);
+const dog1 = new Dog("Labrador", "Brown", 3);
 const dog2 = new Dog("Pitbull", "white", 5);
 dog1.ageInHumanYears();
 dog2.ageInHumanYears();
@@ -200,8 +200,22 @@ dog2.ageInHumanYears();
 /************************************************************* */
 //Problem 7: create a function that outputs your 3 favorite data types, with a message explaining why you like that data type.
 
-//your code...
+const favorite = () => {
+    first(0x1fffffffffffff);
+    second({});
+    third(String);
+    function first(a) {
+        console.log("One of my favorite data type is the bigInt, because it allow to have very big numbers " + a);
+    }
+    function second(b) {
+        console.log("Another one of my favorite data type is the object, where can be denifed as an un ordered collection of data " + b);
+    }
+    function third(c) {
+        console.log("Another one of my favorite data type is the string, where we can have any word we want " + c);
+    }
+}
 
+favorite()
 
 
 /************************************************************* */
@@ -209,9 +223,9 @@ dog2.ageInHumanYears();
 
 //1. Create a Higher Order Function called multiple(x) that takes a single parameter.  This HOF should return another function fn(y) that takes another single parameter y.  This inner function should compute the product of it's parameter with the parameter passed into multiple.  Use this returned "first-class" function to compute triples of any given number.
 
-const multiple = (x)=>{
-    return function fn(y){
-        return(x*y);
+const multiple = (x) => {
+    return function fn(y) {
+        return (x * y);
     };
 }
 
@@ -221,10 +235,19 @@ triple = multiple(3)(6);
 console.log(triple);
 
 
-// 2. Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
+// 2. Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable called message that holds 
+//" is how much the stock has increased".  Return an inner function with years (yrs) as a parameter and declare a variable for growth rate (r) of 5%. 
+//Console log your calculation.
 
-// Once finished, declare a variable called futureValue that holds your stockGain function and enter any amount for the cost basis and a number for the number of years.  Run the function returned by the higher order function to display the future value of the stock.  
-
-//your code...
-
+// Once finished, declare a variable called futureValue that holds your stockGain function and enter any amount for the cost basis and a number for
+// the number of years.  Run the function returned by the higher order function to display the future value of the stock.  
+let message = " is how much the stock has increased";
+const futureValue = function stockGain(basis){
+    return function years(yrs){
+        let growth = basis*yrs*0.05*100;
+        console.log(growth);
+        return growth;
+    }
+}
+futureValue(100)(12);
 
