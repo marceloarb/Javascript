@@ -184,12 +184,12 @@ sortNums(numbers);
 //Write another console.log() statement explaining why this line of code prints false. 
 // Refactor the code on line 106, so you can successfully check to see if {company : "TEKsystems"} exists in the mapObj.
 
-let mapObj = new Set(['company', 'TEKsystems',
-'object', person = {first_name: "Marcelo", last_name: 'Barbosa'},
-'bigInt', "Works to have a big numerical data",
-'string', 'Works to user words',
-'boolean', true]);
-
+const mapObj = new Map();
+mapObj.set('company', 'TEKsystems');
+mapObj.set('object', person = {first_name: "Marcelo", last_name: 'Barbosa'});
+mapObj.set('bigInt', "Works to have a big numerical data")
+mapObj.set('string', 'Works to user words')
+mapObj.set('boolean', true)
 console.log(mapObj);
 
 
