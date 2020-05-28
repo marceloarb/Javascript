@@ -244,7 +244,7 @@ console.log(triple);
 let message = " is how much the stock has increased";
 const futureValue = function stockGain(basis){
     return function years(yrs){
-        let growth = basis*yrs*0.05*100;
+        let growth = basis*yrs*0.05+100;
         console.log(growth);
         return growth;
     }

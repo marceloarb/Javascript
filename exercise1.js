@@ -87,7 +87,8 @@ reverseNumber(6173692334);
 
 /************************************************************* */
 // Problem 5:
-// Write a JavaScript function that creates a car object using information about your car. Include the make, model, year, and color. Write a function to get the year, color, make, and model in that order.
+// Write a JavaScript function that creates a car object using information about your car. Include the make, model, year, and color. 
+//Write a function to get the year, color, make, and model in that order.
 
 const car = class {
     constructor(make,model,year,color){
