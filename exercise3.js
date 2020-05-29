@@ -191,7 +191,9 @@ mapObj.set('bigInt', "Works to have a big numerical data")
 mapObj.set('string', 'Works to user words')
 mapObj.set('boolean', true)
 console.log(mapObj);
-
+console.log(mapObj.has('company' , "TEKsystems")); 
+console.log(mapObj.get('company'));
+console.log(mapObj.size);
 
 //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
 
