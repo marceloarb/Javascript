@@ -9,11 +9,11 @@
 </head>
 <body>
     <main id="timer">
-        <p>0:00</p>
+        <p id="display" >0:00</p>
         <div class=timer-buttons>
-            <button>Start</button>
-            <button>Stop</button>
-            <button>Reset</button>
+            <button onclick="timer()" id="start">Start</button>
+            <button onclick="stop()" id="stop-btn" >Stop</button>
+            <button onclick="reset()" id="reset-btn">Reset</button>
         </div>
     </main>
 </body>
